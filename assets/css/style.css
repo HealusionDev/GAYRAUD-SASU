@@ -1,0 +1,85 @@
+/* Identité visuelle : modifier ces variables pour changer tout le site */
+:root {
+  --color-primary: #2f5d62;
+  --color-accent: #d9a441;
+  --color-text: #222222;
+  --color-muted: #666666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f3ef;
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+
+  --radius: 8px;
+  --max-width: 1100px;
+  --space: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--font-heading); color: var(--color-primary); line-height: 1.2; }
+
+a { color: var(--color-primary); }
+
+img { max-width: 100%; height: auto; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
+main { padding-block: calc(var(--space) * 3); min-height: 60vh; }
+
+/* En-tête */
+.site-header { position: relative; background: var(--color-bg-alt); }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space);
+}
+.logo { font-family: var(--font-heading); font-size: 1.25rem; font-weight: bold; text-decoration: none; }
+.site-nav { display: flex; gap: calc(var(--space) * 1.5); }
+.site-nav a { text-decoration: none; }
+.nav-toggle { display: none; background: none; border: 0; font-size: 1.5rem; cursor: pointer; color: var(--color-primary); }
+
+/* Bouton */
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.btn:hover { background: var(--color-accent); }
+
+/* Agenda Google intégré */
+.agenda iframe { width: 100%; height: 700px; border: 0; border-radius: var(--radius); }
+
+/* Pied de page */
+.site-footer { background: var(--color-bg-alt); color: var(--color-muted); padding-block: calc(var(--space) * 2); font-size: 0.9rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-bg-alt);
+  }
+  .site-nav.is-open { display: flex; }
+  .site-nav a { padding: var(--space); border-top: 1px solid #ddd; }
+}
