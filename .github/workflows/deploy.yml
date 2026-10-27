@@ -1,9 +1,11 @@
+# Déploie le site statique sur GitHub Pages à chaque push sur main.
+# Prérequis (une seule fois) : Settings > Pages > Build and deployment > Source : « GitHub Actions ».
 name: Déploiement GitHub Pages
 
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  workflow_dispatch: # permet aussi de relancer à la main depuis l'onglet Actions
 
 permissions:
   contents: read
@@ -12,7 +14,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -21,10 +23,22 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Récupérer le code
+        uses: actions/checkout@v5
+
+      - name: Préparer le dossier publié (sans les fichiers internes)
+        run: |
+          mkdir _site
+          rsync -a --exclude '_site' --exclude '.git' --exclude '.github' --exclude 'CLAUDE.md' --exclude 'README.md' ./ _site/
+
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Téléverser le site
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: .
-      - id: deployment
+          path: _site
+
+      - name: Déployer
+        id: deployment
         uses: actions/deploy-pages@v4

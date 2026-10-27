@@ -1,31 +1,51 @@
-# Site vitrine – GAYRAUD
+# Site vitrine – Gayraud, Transformation digitale & conseil
 
 ## Contexte
-Site vitrine d'une SASU de conseil en transformation digitale (société en cours d'immatriculation).
-Objectifs : présenter les offres, le parcours, rediriger vers LinkedIn et Malt, permettre la prise de RDV.
+Site vitrine de la SASU de conseil de Cyrille Gayraud (société en cours d'immatriculation, oct. 2026).
+Objectifs : présenter les offres (cadrage de projet IT, chefferie de projet IT, usages de l'IA),
+le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous Google Agenda.
+
+- LinkedIn : https://www.linkedin.com/in/cyrillegayraud/
+- Malt : https://www.malt.fr/profile/cyrillegayraud
+- Réservation Google Agenda : https://calendar.app.google/3kwuX8YK9dvDhthw6
 
 ## Choix techniques (ne pas changer sans accord)
-- HTML/CSS pur, sans framework ni étape de build. JS minimal (menu mobile).
-- Hébergement GitHub Pages, déploiement via GitHub Actions (.github/workflows/deploy.yml).
-- Prise de RDV : page de réservation Google Calendar (appointment schedule), intégrée en iframe + bouton.
-- Nom de domaine : pas encore choisi. Prévoir l'ajout d'un fichier CNAME plus tard.
+- HTML/CSS pur, sans framework ni étape de build. JS minimal (`assets/js/main.js` : menu mobile, année).
+- Hébergement GitHub Pages, déploiement automatique via `.github/workflows/deploy.yml` à chaque push sur `main`.
+- Tous les liens internes sont **relatifs** (`offres.html`, `assets/...`) pour fonctionner aussi bien
+  sur `compte.github.io/repo/` que sur le futur nom de domaine.
+- Le header et le footer sont **dupliqués dans chaque page** : toute modification doit être reportée
+  sur toutes les pages `*.html`.
+- Nom de domaine : pas encore choisi. Le jour venu : ajouter un fichier `CNAME`, puis remplacer
+  l'URL de base dans les balises `canonical`, `og:url`, `og:image`, le JSON-LD, `sitemap.xml` et `robots.txt`.
 
-## Identité visuelle
-- Couleurs : [à compléter, codes hex]
-- Typographies : [à compléter]
-- Toutes les couleurs et polices sont définies en variables CSS dans assets/css/style.css.
+## Identité visuelle (reprise des supports d'offres)
+- Fond noir `#000`, cartes `#0f1014`, bordures `#23242c`, texte blanc / gris `#b9bac4`.
+- Violet principal `#7349fd`, mauve `#b862ea`, magenta (accent IA) `#d21cf0`.
+- Dégradé signature : `#724dff → #ba62ea` (barre sous les cartes d'offre et en pied de page).
+- Police : Mulish (400/600/700/800).
+- Logos dans `assets/img/` : `logo-mark.png` (G), `logo-wordmark.png`, `logo-full.png`, `og-image.jpg`.
+- Toutes les valeurs sont des variables CSS en tête de `assets/css/style.css`.
 
 ## Exigences sur chaque page
-- SEO : <title> et <meta name="description"> uniques, balises Open Graph et Twitter Card,
-  lien canonical, attribut lang="fr", un seul <h1>, données structurées Schema.org
-  (ProfessionalService / Person) sur l'accueil.
-- Accessibilité : contrastes suffisants, alt sur les images, navigation au clavier.
-- Responsive, mobile first.
-- Footer commun : LinkedIn, Malt, mentions légales, confidentialité.
+- SEO : `<title>` et `<meta name="description">` uniques, Open Graph + Twitter Card, `canonical`,
+  `lang="fr"`, un seul `<h1>`, JSON-LD `ProfessionalService` sur l'accueil. Mettre à jour `sitemap.xml`
+  à chaque nouvelle page.
+- Accessibilité : contrastes suffisants, `alt` sur les images, navigation clavier, lien d'évitement.
+- Responsive, mobile first. Pas de défilement horizontal.
 
-## Checklist légale (à rappeler avant toute mise en ligne)
-- [ ] Mentions légales : dénomination, SASU, capital, siège, RCS/SIREN, TVA intracom,
-      directeur de publication, contact, hébergeur (GitHub Inc., adresse, contact).
-- [ ] Politique de confidentialité RGPD (Google Calendar, formulaire, durée de conservation, droits).
+## Checklist légale (à rappeler avant toute mise en ligne officielle)
+- [ ] Mentions légales : dénomination, capital, siège, RCS/SIREN, TVA intracom, contact
+      (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
+- [ ] Politique de confidentialité RGPD (`confidentialite.html`) : durée de conservation, contact.
+- [ ] Auto-héberger la police Mulish (fichiers woff2 dans `assets/fonts/`) et retirer Google Fonts.
 - [ ] Pas de traceur non exempté sans bandeau de consentement.
+- [ ] Vérifier l'accord des clients cités dans `parcours.html` (Shareit, Make.org Foundation, CNP Assurances).
 - [ ] Mettre à jour les mentions légales dès réception du Kbis.
+
+## Feuille de route
+1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
+2. Session 2 – Contenus : accueil, offres détaillées, parcours complet.
+3. Session 3 – Rendez-vous intégré (iframe Google `?gv=true`), formulaire de contact.
+4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
+5. Nom de domaine + email pro.
