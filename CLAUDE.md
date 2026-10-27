@@ -51,7 +51,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 
 ## Feuille de route
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
-2. 🟡 Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; reste : relecture de l'accueil.
+2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
 3. Session 3 – Rendez-vous intégré (iframe Google `?gv=true`), formulaire de contact.
 4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
 5. Nom de domaine + email pro.
