@@ -281,7 +281,7 @@ ul { padding-left: 1.2em; }
 
 /* Fiche format de mission */
 .facts { display: grid; gap: 1rem; margin: 2.5rem 0 2rem; padding: 1.5rem; border: 1px solid var(--c-border); border-radius: var(--radius); }
-@media (min-width: 700px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 700px) { .facts { grid-template-columns: repeat(4, 1fr); } .facts dd { max-width: 243.5px; } }
 .facts dt { font-size: var(--fs-sm); font-weight: 700; color: var(--c-mauve); text-transform: uppercase; letter-spacing: 0.08em; }
 .facts dd { margin: 0.2rem 0 0; }
 
