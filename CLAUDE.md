@@ -27,6 +27,11 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - Logos dans `assets/img/` : `logo-mark.png` (G), `logo-wordmark.png`, `logo-full.png`, `og-image.jpg`.
 - Toutes les valeurs sont des variables CSS en tête de `assets/css/style.css`.
 
+## Documents téléchargeables
+- `assets/docs/Gayraud-Offre-Cadrage-projet-IT.pdf` et `assets/docs/Gayraud-Offre-Chefferie-projet-IT.pdf`,
+  liés depuis `offres.html`. Pour une nouvelle version : remplacer le fichier en gardant le même nom
+  et mettre à jour la taille / le nombre de pages indiqués sur la carte de téléchargement.
+
 ## Exigences sur chaque page
 - SEO : `<title>` et `<meta name="description">` uniques, Open Graph + Twitter Card, `canonical`,
   `lang="fr"`, un seul `<h1>`, JSON-LD `ProfessionalService` sur l'accueil. Mettre à jour `sitemap.xml`
@@ -40,12 +45,13 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - [ ] Politique de confidentialité RGPD (`confidentialite.html`) : durée de conservation, contact.
 - [ ] Auto-héberger la police Mulish (fichiers woff2 dans `assets/fonts/`) et retirer Google Fonts.
 - [ ] Pas de traceur non exempté sans bandeau de consentement.
-- [ ] Vérifier l'accord des clients cités dans `parcours.html` (Shareit, Make.org Foundation, CNP Assurances).
+- [ ] Ne jamais publier les coordonnées personnelles du CV (téléphone, email perso).
+- [ ] Vérifier l'accord des clients cités dans `parcours.html` (Share it, Make.org Foundation, CNP Assurances).
 - [ ] Mettre à jour les mentions légales dès réception du Kbis.
 
 ## Feuille de route
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
-2. Session 2 – Contenus : accueil, offres détaillées, parcours complet.
+2. 🟡 Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; reste : relecture de l'accueil.
 3. Session 3 – Rendez-vous intégré (iframe Google `?gv=true`), formulaire de contact.
 4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
 5. Nom de domaine + email pro.
