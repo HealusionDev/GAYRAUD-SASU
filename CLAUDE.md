@@ -1,26 +1,31 @@
-# GAYRAUD SASU — site vitrine
+# Site vitrine – GAYRAUD
 
-Site statique en HTML/CSS/JS pur, sans framework ni étape de build. Hébergé sur GitHub Pages, déployé automatiquement à chaque push sur `main` par `.github/workflows/deploy.yml`.
+## Contexte
+Site vitrine d'une SASU de conseil en transformation digitale (société en cours d'immatriculation).
+Objectifs : présenter les offres, le parcours, rediriger vers LinkedIn et Malt, permettre la prise de RDV.
 
-## Structure
+## Choix techniques (ne pas changer sans accord)
+- HTML/CSS pur, sans framework ni étape de build. JS minimal (menu mobile).
+- Hébergement GitHub Pages, déploiement via GitHub Actions (.github/workflows/deploy.yml).
+- Prise de RDV : page de réservation Google Calendar (appointment schedule), intégrée en iframe + bouton.
+- Nom de domaine : pas encore choisi. Prévoir l'ajout d'un fichier CNAME plus tard.
 
-- Pages à la racine : `index.html`, `offres.html`, `parcours.html`, `rendez-vous.html`, `contact.html`, `mentions-legales.html`, `confidentialite.html`, `404.html`.
-- `assets/css/style.css` : toute l'identité visuelle passe par les variables CSS de `:root` (couleurs, polices, espacements). Modifier les variables plutôt que coder des valeurs en dur.
-- `assets/js/main.js` : uniquement le menu mobile. Garder le JS au strict minimum.
-- `assets/img/` : logo, photo, `favicon.png`, `og-image.jpg` (image Open Graph, 1200×630).
+## Identité visuelle
+- Couleurs : [à compléter, codes hex]
+- Typographies : [à compléter]
+- Toutes les couleurs et polices sont définies en variables CSS dans assets/css/style.css.
 
-## Conventions
+## Exigences sur chaque page
+- SEO : <title> et <meta name="description"> uniques, balises Open Graph et Twitter Card,
+  lien canonical, attribut lang="fr", un seul <h1>, données structurées Schema.org
+  (ProfessionalService / Person) sur l'accueil.
+- Accessibilité : contrastes suffisants, alt sur les images, navigation au clavier.
+- Responsive, mobile first.
+- Footer commun : LinkedIn, Malt, mentions légales, confidentialité.
 
-- Contenu en français, `lang="fr"`.
-- Chaque page reprend le même en-tête (navigation) et pied de page : en cas de modification, mettre à jour toutes les pages.
-- Liens et chemins relatifs (`offres.html`, `assets/...`) pour fonctionner aussi sous `https://<compte>.github.io/GAYRAUD-SASU/`.
-- Chaque page a un `<title>` et une `<meta name="description">` propres.
-- `rendez-vous.html` intègre la page de réservation Google Agenda dans une iframe : renseigner son `src`.
-- Une nouvelle page doit être ajoutée à la navigation et à `sitemap.xml`.
-
-## À faire
-
-- Remplacer `https://www.example.fr` par le vrai domaine dans `robots.txt` et `sitemap.xml`.
-- Compléter les textes marqués « À compléter » (notamment les mentions légales obligatoires).
-- Ajouter logo, favicon et image Open Graph dans `assets/img/`.
-- Activer GitHub Pages : Settings → Pages → Source : « GitHub Actions ».
+## Checklist légale (à rappeler avant toute mise en ligne)
+- [ ] Mentions légales : dénomination, SASU, capital, siège, RCS/SIREN, TVA intracom,
+      directeur de publication, contact, hébergeur (GitHub Inc., adresse, contact).
+- [ ] Politique de confidentialité RGPD (Google Calendar, formulaire, durée de conservation, droits).
+- [ ] Pas de traceur non exempté sans bandeau de consentement.
+- [ ] Mettre à jour les mentions légales dès réception du Kbis.
