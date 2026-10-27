@@ -44,7 +44,8 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
       (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
 - [ ] Politique de confidentialité RGPD (`confidentialite.html`) : durée de conservation, contact.
 - [ ] Auto-héberger la police Mulish (fichiers woff2 dans `assets/fonts/`) et retirer Google Fonts.
-- [ ] Pas de traceur non exempté sans bandeau de consentement.
+- [ ] Pas de traceur non exempté sans bandeau de consentement. Vérifier en session 4 les cookies déposés
+      par l'iframe Google Agenda (`rendez-vous.html`) et adapter confidentialité / consentement si besoin.
 - [ ] Ne jamais publier les coordonnées personnelles du CV (téléphone, email perso).
 - [ ] Vérifier l'accord des clients cités dans `parcours.html` (Share it, Make.org Foundation, CNP Assurances).
 - [ ] Mettre à jour les mentions légales dès réception du Kbis.
@@ -52,6 +53,6 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Feuille de route
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
-3. Session 3 – Rendez-vous intégré (iframe Google `?gv=true`), formulaire de contact.
+3. 🟡 Session 3 – ✅ agenda Google intégré en iframe dans `rendez-vous.html` (+ lien de secours) ; reste : formulaire de contact.
 4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
 5. Nom de domaine + email pro.
