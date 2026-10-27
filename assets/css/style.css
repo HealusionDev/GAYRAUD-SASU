@@ -79,8 +79,8 @@ ul { padding-left: 1.2em; }
 .skip-link { position: absolute; left: 1rem; top: -100px; z-index: 100; background: var(--c-violet); color: #fff; padding: 0.6rem 1rem; border-radius: 8px; }
 .skip-link:focus { top: 1rem; }
 .eyebrow { display: inline-block; font-size: 1rem; /* 16px */ font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-mauve); margin-bottom: 0.9rem; }
-.lead { font-size: var(--fs-lg); color: var(--c-text-muted); max-width: 790px; }
-.section-head { max-width: 790px; margin-bottom: 2.5rem; }
+.lead { font-size: var(--fs-lg); color: var(--c-text-muted); max-width: 900px; }
+.section-head { max-width: 900px; margin-bottom: 2.5rem; }
 .section-head--center { margin-inline: auto; text-align: center; }
 .section-head--center .lead { margin-inline: auto; }
 
