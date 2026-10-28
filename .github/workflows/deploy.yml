@@ -1,5 +1,7 @@
 # Déploie le site statique sur GitHub Pages à chaque push sur main.
 # Prérequis (une seule fois) : Settings > Pages > Build and deployment > Source : « GitHub Actions ».
+# Actions en versions Node 24 (mise à jour du 28/10/2026) :
+#   checkout v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5.
 name: Déploiement GitHub Pages
 
 on:
@@ -18,27 +20,31 @@ concurrency:
 
 jobs:
   deploy:
+    # ubuntu-latest suit les nouvelles images (Ubuntu 26) ; le job n'utilise que git et tar, présents partout.
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Récupérer le code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Préparer le dossier publié (sans les fichiers internes)
         run: |
           mkdir _site
-          rsync -a --exclude '_site' --exclude '.git' --exclude '.github' --exclude 'CLAUDE.md' --exclude 'README.md' ./ _site/
+          git archive HEAD | tar -x -C _site
+          rm -rf _site/.github _site/CLAUDE.md _site/README.md
+          echo "Fichiers publiés :" && find _site -type f | sort
 
       - name: Configurer GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Téléverser le site
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
       - name: Déployer
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
