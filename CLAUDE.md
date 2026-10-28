@@ -53,7 +53,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
       (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
 - [x] Politique de confidentialité RGPD (`confidentialite.html`) : données de réservation, base légale,
       conservation 3 ans après le dernier contact du prospect, prestataires (Google, OVHcloud, GitHub), cookies, droits.
-      Reste : dénomination de la société (Kbis).
+      Dénomination GAYRAUD (SASU) renseignée.
 - [x] Police Mulish auto-hébergée : `assets/fonts/mulish-latin.woff` (variable 400–800, sous-ensemble latin,
       licence OFL dans `assets/fonts/OFL-Mulish.txt`), déclarée en `@font-face` dans `style.css`. Plus de Google Fonts.
 - [x] Aucun traceur avant consentement : l'agenda Google (`rendez-vous.html`) n'est chargé qu'au clic sur
