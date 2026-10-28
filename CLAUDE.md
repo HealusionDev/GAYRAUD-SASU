@@ -60,4 +60,4 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
 3. 🟡 Session 3 – ✅ agenda Google intégré en iframe dans `rendez-vous.html` (+ lien de secours) ; reste : formulaire de contact.
 4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
-5. 🟡 Nom de domaine + email pro : ✅ email intégré, ✅ URLs du site sur gayraud.it ; reste : DNS OVH + domaine dans GitHub Pages + HTTPS.
+5. ✅ Nom de domaine + email pro : gayraud.it en HTTPS (Enforce HTTPS actif), www redirigé, contact@gayraud.it intégré.
