@@ -33,7 +33,9 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - Violet principal `#7349fd`, mauve `#b862ea`, magenta (accent IA) `#d21cf0`.
 - Dégradé signature : `#724dff → #ba62ea` (barre sous les cartes d'offre et en pied de page).
 - Police : Mulish (400/600/700/800), auto-hébergée dans `assets/fonts/`.
-- Logos dans `assets/img/` : `logo-mark.png` (G), `logo-wordmark.png`, `logo-full.png`, `og-image.jpg`.
+- Logos dans `assets/img/` : en-tête `logo-header.webp` (G + AYRAUD, 665×84, affiché à 28 px de haut),
+  pied de page `logo-wordmark.webp` (540 px, affiché à 180 px). Sources PNG conservées : `logo-mark.png` (G),
+  `logo-wordmark.png`, `logo-full.png` ; image de partage `og-image.jpg`. Images affichées : WebP à 3× la taille d'affichage.
 - Toutes les valeurs sont des variables CSS en tête de `assets/css/style.css`.
 
 ## Documents téléchargeables
@@ -69,5 +71,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
 3. 🟡 Session 3 – ✅ agenda Google intégré, chargé au clic (consentement) + lien de secours ; reste : formulaire de contact (à décider).
-4. 🟡 Session 4 – Légal & SEO : ✅ police auto-hébergée, ✅ consentement agenda, ✅ confidentialité ; reste : audit Lighthouse, mentions légales (Kbis).
+4. 🟡 Session 4 – Légal & SEO : ✅ police auto-hébergée, ✅ consentement agenda, ✅ confidentialité,
+   ✅ audit Lighthouse mobile du 28/10/2026 (100/100/100/100 sur les 5 pages ; corrigés ensuite : ordre des titres
+   sur Contact, logos en WebP). Non corrigeable : durée de cache de 10 min imposée par GitHub Pages. Reste : mentions légales (Kbis).
 5. ✅ Nom de domaine + email pro : gayraud.it en HTTPS (Enforce HTTPS actif), www redirigé, contact@gayraud.it intégré.
