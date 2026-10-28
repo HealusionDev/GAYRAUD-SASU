@@ -13,9 +13,11 @@ assets/img/            logos, favicons, image de partage
 ```
 
 ## Prévisualiser en local
+Les liens internes sont sans extension (`/offres`), comme sur GitHub Pages : utiliser un serveur
+qui gère les « clean URLs », par exemple :
 ```bash
-python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
+npx serve .
+# puis ouvrir l'adresse indiquée (ex. http://localhost:3000)
 ```
 
 ## Mise en ligne

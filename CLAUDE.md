@@ -14,8 +14,12 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Choix techniques (ne pas changer sans accord)
 - HTML/CSS pur, sans framework ni étape de build. JS minimal (`assets/js/main.js` : menu mobile, année).
 - Hébergement GitHub Pages, déploiement automatique via `.github/workflows/deploy.yml` à chaque push sur `main`.
-- Tous les liens internes sont **relatifs** (`offres.html`, `assets/...`) pour fonctionner aussi bien
-  sur `compte.github.io/repo/` que sur le futur nom de domaine.
+- **URLs sans extension** : les liens internes pointent vers `offres`, `parcours`, `contact`… (jamais `.html`)
+  et vers `./` pour l'accueil (jamais `index.html`). GitHub Pages sert `offres.html` pour `/offres`.
+  Les `canonical`, `og:url` et `sitemap.xml` utilisent aussi ces URLs sans extension.
+- Liens internes et ressources en chemins **relatifs** (`assets/...`), sauf dans `404.html` qui utilise des
+  chemins absolus (`/assets/...`, `/offres`) car elle peut être servie à n'importe quelle profondeur
+  (pas de `canonical` ni d'`og:url` sur la 404).
 - Le header et le footer sont **dupliqués dans chaque page** : toute modification doit être reportée
   sur toutes les pages `*.html`.
 - Domaine personnalisé `gayraud.it` : déclaré dans Settings > Pages (pas de fichier `CNAME` : il est ignoré
