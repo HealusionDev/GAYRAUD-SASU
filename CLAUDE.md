@@ -63,6 +63,8 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
       `confidentialite.html#cookies` (NID, __Secure-ENID, SEARCH_SAMESITE). Ne jamais réintroduire d'iframe chargée d'office.
 - [ ] Après le Kbis : passage de l'agenda sur Google Workspace (contrat de sous-traitance RGPD) → mettre à jour
       l'URL d'intégration dans `rendez-vous.html` et la section « Destinataires et prestataires » de la confidentialité.
+      Si l'email contact@gayraud.it passe aussi sur Workspace : modification des MX chez OVH (seule exception à la règle
+      « ne pas toucher aux MX »), et remplacer OVHcloud par Google comme prestataire de messagerie dans la confidentialité.
 - [ ] Ne jamais publier les coordonnées personnelles du CV (téléphone, email perso).
 - [ ] Vérifier l'accord des clients cités dans `parcours.html` (Share it, Make.org Foundation, CNP Assurances).
 - [ ] Mettre à jour les mentions légales dès réception du Kbis.
