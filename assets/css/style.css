@@ -110,8 +110,9 @@ ul { padding-left: 1.2em; }
 }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-.brand__mark { width: 34px; height: auto; }
-.brand__name { width: 128px; height: auto; }
+/* Logo d'en-tête : « G » du monogramme + « AYRAUD » (hauteur = ancien monogramme) */
+.brand__logo { height: 33px; width: auto; }
+@media (max-width: 380px) { .brand__logo { height: 28px; } }
 .nav { display: flex; align-items: center; gap: 0.25rem; }
 .nav__list { list-style: none; display: flex; gap: 0.25rem; margin: 0; padding: 0; }
 .nav__link { display: block; padding: 0.5rem 0.8rem; border-radius: 8px; text-decoration: none; color: var(--c-text-muted); font-weight: 600; font-size: 0.95rem; }
