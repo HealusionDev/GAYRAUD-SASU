@@ -26,3 +26,20 @@
   var el = document.querySelector('[data-year]');
   if (el) el.textContent = new Date().getFullYear();
 })();
+
+// Agenda Google : chargé uniquement après clic (aucun cookie Google avant consentement)
+(function () {
+  var box = document.getElementById('agenda');
+  if (!box) return;
+  var btn = box.querySelector('[data-load-booking]');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var frame = document.createElement('iframe');
+    frame.className = 'booking-frame';
+    frame.src = box.getAttribute('data-src');
+    frame.title = 'Agenda de réservation Google : choisir un créneau';
+    frame.setAttribute('tabindex', '0');
+    box.replaceWith(frame);
+    frame.focus();
+  });
+})();

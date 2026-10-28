@@ -329,3 +329,15 @@ ul { padding-left: 1.2em; }
 .grid--4 { grid-template-columns: 1fr; }
 @media (min-width: 700px) { .grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1100px) { .grid--4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Encart de consentement avant chargement de l'agenda Google */
+.booking-consent {
+  display: grid; place-items: center; min-height: 360px; padding: 2rem 1.25rem;
+  background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius); text-align: center;
+}
+.booking-consent__inner { max-width: 560px; }
+.booking-consent .card__icon { margin: 0 auto 1.25rem; }
+.booking-consent h2 { font-size: 1.4rem; }
+.booking-consent p { color: var(--c-text-muted); }
+.booking-consent a { color: var(--c-mauve); }
+.booking-consent .btn { margin-top: 0.75rem; }

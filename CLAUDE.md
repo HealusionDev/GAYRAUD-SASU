@@ -51,11 +51,16 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Checklist légale (à rappeler avant toute mise en ligne officielle)
 - [ ] Mentions légales : dénomination, capital, siège, RCS/SIREN, TVA intracom, contact
       (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
-- [ ] Politique de confidentialité RGPD (`confidentialite.html`) : durée de conservation, contact.
+- [x] Politique de confidentialité RGPD (`confidentialite.html`) : données de réservation, base légale,
+      conservation 3 ans après le dernier contact du prospect, prestataires (Google, OVHcloud, GitHub), cookies, droits.
+      Reste : dénomination de la société (Kbis).
 - [x] Police Mulish auto-hébergée : `assets/fonts/mulish-latin.woff` (variable 400–800, sous-ensemble latin,
       licence OFL dans `assets/fonts/OFL-Mulish.txt`), déclarée en `@font-face` dans `style.css`. Plus de Google Fonts.
-- [ ] Pas de traceur non exempté sans bandeau de consentement. Vérifier en session 4 les cookies déposés
-      par l'iframe Google Agenda (`rendez-vous.html`) et adapter confidentialité / consentement si besoin.
+- [x] Aucun traceur avant consentement : l'agenda Google (`rendez-vous.html`) n'est chargé qu'au clic sur
+      « Afficher l'agenda » (`#agenda[data-src]` + `assets/js/main.js`). Cookies Google listés dans
+      `confidentialite.html#cookies` (NID, __Secure-ENID, SEARCH_SAMESITE). Ne jamais réintroduire d'iframe chargée d'office.
+- [ ] Après le Kbis : passage de l'agenda sur Google Workspace (contrat de sous-traitance RGPD) → mettre à jour
+      l'URL d'intégration dans `rendez-vous.html` et la section « Destinataires et prestataires » de la confidentialité.
 - [ ] Ne jamais publier les coordonnées personnelles du CV (téléphone, email perso).
 - [ ] Vérifier l'accord des clients cités dans `parcours.html` (Share it, Make.org Foundation, CNP Assurances).
 - [ ] Mettre à jour les mentions légales dès réception du Kbis.
@@ -63,6 +68,6 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Feuille de route
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
-3. 🟡 Session 3 – ✅ agenda Google intégré en iframe dans `rendez-vous.html` (+ lien de secours) ; reste : formulaire de contact.
-4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
+3. 🟡 Session 3 – ✅ agenda Google intégré, chargé au clic (consentement) + lien de secours ; reste : formulaire de contact (à décider).
+4. 🟡 Session 4 – Légal & SEO : ✅ police auto-hébergée, ✅ consentement agenda, ✅ confidentialité ; reste : audit Lighthouse, mentions légales (Kbis).
 5. ✅ Nom de domaine + email pro : gayraud.it en HTTPS (Enforce HTTPS actif), www redirigé, contact@gayraud.it intégré.
