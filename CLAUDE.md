@@ -32,7 +32,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - Fond noir `#000`, cartes `#0f1014`, bordures `#23242c`, texte blanc / gris `#b9bac4`.
 - Violet principal `#7349fd`, mauve `#b862ea`, magenta (accent IA) `#d21cf0`.
 - Dégradé signature : `#724dff → #ba62ea` (barre sous les cartes d'offre et en pied de page).
-- Police : Mulish (400/600/700/800).
+- Police : Mulish (400/600/700/800), auto-hébergée dans `assets/fonts/`.
 - Logos dans `assets/img/` : `logo-mark.png` (G), `logo-wordmark.png`, `logo-full.png`, `og-image.jpg`.
 - Toutes les valeurs sont des variables CSS en tête de `assets/css/style.css`.
 
@@ -52,7 +52,8 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - [ ] Mentions légales : dénomination, capital, siège, RCS/SIREN, TVA intracom, contact
       (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
 - [ ] Politique de confidentialité RGPD (`confidentialite.html`) : durée de conservation, contact.
-- [ ] Auto-héberger la police Mulish (fichiers woff2 dans `assets/fonts/`) et retirer Google Fonts.
+- [x] Police Mulish auto-hébergée : `assets/fonts/mulish-latin.woff` (variable 400–800, sous-ensemble latin,
+      licence OFL dans `assets/fonts/OFL-Mulish.txt`), déclarée en `@font-face` dans `style.css`. Plus de Google Fonts.
 - [ ] Pas de traceur non exempté sans bandeau de consentement. Vérifier en session 4 les cookies déposés
       par l'iframe Google Agenda (`rendez-vous.html`) et adapter confidentialité / consentement si besoin.
 - [ ] Ne jamais publier les coordonnées personnelles du CV (téléphone, email perso).
