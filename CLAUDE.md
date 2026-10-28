@@ -49,7 +49,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - Responsive, mobile first. Pas de défilement horizontal.
 
 ## Checklist légale (à rappeler avant toute mise en ligne officielle)
-- [ ] Mentions légales : dénomination, capital, siège, RCS/SIREN, TVA intracom, contact
+- [ ] Mentions légales : ✅ dénomination GAYRAUD ; reste capital, siège, RCS/SIREN, TVA intracom, contact
       (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
 - [x] Politique de confidentialité RGPD (`confidentialite.html`) : données de réservation, base légale,
       conservation 3 ans après le dernier contact du prospect, prestataires (Google, OVHcloud, GitHub), cookies, droits.
