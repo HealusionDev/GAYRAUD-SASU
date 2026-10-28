@@ -8,6 +8,8 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - LinkedIn : https://www.linkedin.com/in/cyrillegayraud/
 - Malt : https://www.malt.fr/profile/cyrillegayraud
 - Réservation Google Agenda : https://calendar.app.google/3kwuX8YK9dvDhthw6
+- Email professionnel : contact@gayraud.it (pied de page, contact, mentions légales, confidentialité, JSON-LD)
+- Nom de domaine : https://gayraud.it (registrar OVHcloud, site hébergé sur GitHub Pages)
 
 ## Choix techniques (ne pas changer sans accord)
 - HTML/CSS pur, sans framework ni étape de build. JS minimal (`assets/js/main.js` : menu mobile, année).
@@ -16,8 +18,11 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
   sur `compte.github.io/repo/` que sur le futur nom de domaine.
 - Le header et le footer sont **dupliqués dans chaque page** : toute modification doit être reportée
   sur toutes les pages `*.html`.
-- Nom de domaine : pas encore choisi. Le jour venu : ajouter un fichier `CNAME`, puis remplacer
-  l'URL de base dans les balises `canonical`, `og:url`, `og:image`, le JSON-LD, `sitemap.xml` et `robots.txt`.
+- Domaine personnalisé `gayraud.it` : déclaré dans Settings > Pages (pas de fichier `CNAME` : il est ignoré
+  avec un déploiement GitHub Actions). DNS chez OVHcloud : 4 enregistrements A + 4 AAAA GitHub Pages sur
+  l'apex, `www` en CNAME vers `healusiondev.github.io`. Ne jamais toucher aux enregistrements MX/SPF/DKIM (email).
+- URL de base utilisée partout (`canonical`, `og:url`, `og:image`, JSON-LD, `sitemap.xml`, `robots.txt`) :
+  `https://gayraud.it`.
 
 ## Identité visuelle (reprise des supports d'offres)
 - Fond noir `#000`, cartes `#0f1014`, bordures `#23242c`, texte blanc / gris `#b9bac4`.
@@ -55,4 +60,4 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
 3. 🟡 Session 3 – ✅ agenda Google intégré en iframe dans `rendez-vous.html` (+ lien de secours) ; reste : formulaire de contact.
 4. Session 4 – Légal & SEO : pages légales finalisées, audit Lighthouse.
-5. Nom de domaine + email pro.
+5. 🟡 Nom de domaine + email pro : ✅ email intégré, ✅ URLs du site sur gayraud.it ; reste : DNS OVH + domaine dans GitHub Pages + HTTPS.
