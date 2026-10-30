@@ -90,19 +90,20 @@
         </article>
       </div>
       <div class="container">
-        <form class="contact-form" id="formulaire" action="https://formsubmit.co/contact@gayraud.it" method="POST" data-ajax="https://formsubmit.co/ajax/contact@gayraud.it" novalidate>
+        <form class="contact-form" id="formulaire" action="https://api.web3forms.com/submit" method="POST" novalidate hidden>
           <h2>Écrivez-moi</h2>
           <p class="muted">Une question, un projet à évoquer ? Laissez-moi un message, je vous réponds rapidement.</p>
 
-          <!-- Paramètres FormSubmit -->
-          <input type="hidden" name="_subject" value="Nouveau message depuis gayraud.it">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://gayraud.it/contact?envoye=1#formulaire">
-          <!-- Anti-spam : champ invisible que seuls les robots remplissent -->
+          <!-- Paramètres Web3Forms. La clé d'accès (publique, sans risque) est fournie par web3forms.com.
+               Tant qu'elle est vide, le formulaire reste masqué. -->
+          <input type="hidden" name="access_key" value="">
+          <input type="hidden" name="subject" value="Nouveau message depuis gayraud.it">
+          <input type="hidden" name="from_name" value="Site gayraud.it">
+          <input type="hidden" name="redirect" value="https://gayraud.it/contact?envoye=1#formulaire">
+          <!-- Anti-spam : case invisible que seuls les robots cochent -->
           <div class="contact-form__trap" aria-hidden="true">
-            <label for="cf-honey">Ne pas remplir</label>
-            <input type="text" id="cf-honey" name="_honey" tabindex="-1" autocomplete="off">
+            <label for="cf-botcheck">Ne pas cocher</label>
+            <input type="checkbox" id="cf-botcheck" name="botcheck" tabindex="-1" autocomplete="off">
           </div>
 
           <div class="contact-form__grid">
@@ -124,7 +125,7 @@
             </div>
           </div>
 
-          <p class="contact-form__legal">Les champs marqués d'un * sont obligatoires. Vos informations sont utilisées uniquement pour répondre à votre demande et sont conservées 3 ans à compter de votre dernier contact. Le message est acheminé par le service FormSubmit. Voir la <a href="confidentialite">politique de confidentialité</a>.</p>
+          <p class="contact-form__legal">Les champs marqués d'un * sont obligatoires. Vos informations sont utilisées uniquement pour répondre à votre demande et sont conservées 3 ans à compter de votre dernier contact. Le message est acheminé par le service Web3Forms. Voir la <a href="confidentialite">politique de confidentialité</a>.</p>
 
           <div class="contact-form__actions">
             <button type="submit" class="btn btn--primary">Envoyer le message</button>

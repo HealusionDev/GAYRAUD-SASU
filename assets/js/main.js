@@ -44,10 +44,13 @@
   });
 })();
 
-// Formulaire de contact : envoi sans quitter la page (FormSubmit, mode AJAX)
+// Formulaire de contact : envoi sans quitter la page (Web3Forms)
 (function () {
   var form = document.getElementById('formulaire');
   if (!form) return;
+  var key = form.querySelector('[name="access_key"]');
+  if (!key || !key.value) return; // formulaire masqué tant que la clé Web3Forms n'est pas renseignée
+  form.hidden = false;
   var status = form.querySelector('.contact-form__status');
   var button = form.querySelector('button[type="submit"]');
 
@@ -77,7 +80,7 @@
     show('Envoi en cours…', true);
     var data = new FormData(form);
     var networkError = false;
-    fetch(form.getAttribute('data-ajax'), {
+    fetch(form.getAttribute('action'), {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: data

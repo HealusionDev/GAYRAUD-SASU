@@ -72,10 +72,10 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Feuille de route
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
-3. ✅ Session 3 – ✅ agenda Google intégré, chargé au clic (consentement) + lien de secours ;
-   ✅ formulaire de contact (`contact.html#formulaire`) via FormSubmit (AJAX vers `formsubmit.co/ajax/contact@gayraud.it`,
-   reCAPTCHA désactivé pour éviter les cookies Google, anti-spam par champ piège `_honey`). Activation à faire une fois
-   (lien reçu sur contact@gayraud.it au premier envoi). FormSubmit est listé dans la confidentialité.
+3. 🟡 Session 3 – ✅ agenda Google intégré, chargé au clic (consentement) + lien de secours ;
+   🟡 formulaire de contact (`contact.html#formulaire`) via Web3Forms (`api.web3forms.com/submit`, FormData + Accept JSON,
+   anti-spam par case piège `botcheck`). FormSubmit abandonné (serveur indisponible, erreur 521). Le formulaire reste
+   masqué (`hidden`) tant que `access_key` est vide : renseigner la clé fournie par web3forms.com pour l'activer.
 4. 🟡 Session 4 – Légal & SEO : ✅ police auto-hébergée, ✅ consentement agenda, ✅ confidentialité,
    ✅ audit Lighthouse mobile du 28/10/2026 (100/100/100/100 sur les 5 pages ; corrigés ensuite : ordre des titres
    sur Contact, logos en WebP). Non corrigeable : durée de cache de 10 min imposée par GitHub Pages. Reste : mentions légales (Kbis).
