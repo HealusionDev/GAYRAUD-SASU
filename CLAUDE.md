@@ -48,7 +48,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
   `lang="fr"`, un seul `<h1>`, JSON-LD `ProfessionalService` sur l'accueil. Mettre à jour `sitemap.xml`
   à chaque nouvelle page.
 - Accessibilité : contrastes suffisants, `alt` sur les images, navigation clavier, lien d'évitement.
-- Responsive, mobile first. Pas de défilement horizontal. Pied de page collé en bas (body en flex colonne, `main` flex: 1).
+- Responsive, mobile first. Pas de défilement horizontal. Pied de page collé en bas (body en flex colonne, `main` flex: 1), marge haute fixe de 104 px (6.5rem) identique sur toutes les pages et tous les écrans : ne pas la surcharger page par page.
 
 ## Checklist légale (à rappeler avant toute mise en ligne officielle)
 - [ ] Mentions légales : ✅ dénomination GAYRAUD, ✅ contact ; reste capital, siège, RCS/SIREN, TVA intracom

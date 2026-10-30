@@ -256,7 +256,7 @@ ul { padding-left: 1.2em; }
 .page-hero .lead { margin-bottom: 0; }
 
 /* ---------- Pied de page ---------- */
-.site-footer { border-top: 1px solid var(--c-border); padding-block: 3rem 2rem; margin-top: var(--section-y); position: relative; }
+.site-footer { border-top: 1px solid var(--c-border); padding-block: 3rem 2rem; margin-top: 6.5rem; /* 104 px fixes, identique sur toutes les pages et tous les écrans */ position: relative; }
 .site-footer::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--gradient); }
 .site-footer__grid { display: grid; gap: 2rem; }
 @media (min-width: 800px) { .site-footer__grid { grid-template-columns: 1.4fr 1fr 1fr; } }
