@@ -380,3 +380,6 @@ ul { padding-left: 1.2em; }
   font: inherit; font-size: var(--fs-sm); color: var(--c-text-muted); text-decoration: underline;
 }
 .booking-revoke:hover { color: var(--c-mauve); }
+
+/* Bandeau « Évaluons ensemble votre projet » : espacement réduit au-dessus et en dessous */
+.section--cta { padding-block: 2rem; }
