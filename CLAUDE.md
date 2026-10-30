@@ -48,7 +48,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
   `lang="fr"`, un seul `<h1>`, JSON-LD `ProfessionalService` sur l'accueil. Mettre à jour `sitemap.xml`
   à chaque nouvelle page.
 - Accessibilité : contrastes suffisants, `alt` sur les images, navigation clavier, lien d'évitement.
-- Responsive, mobile first. Pas de défilement horizontal.
+- Responsive, mobile first. Pas de défilement horizontal. Pied de page collé en bas (body en flex colonne, `main` flex: 1).
 
 ## Checklist légale (à rappeler avant toute mise en ligne officielle)
 - [ ] Mentions légales : ✅ dénomination GAYRAUD, ✅ contact ; reste capital, siège, RCS/SIREN, TVA intracom
@@ -72,7 +72,10 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Feuille de route
 1. ✅ Session 1 – Socle : structure, charte, header/footer, pages de base, workflow Pages.
 2. ✅ Session 2 – Contenus : ✅ offres détaillées + plaquettes PDF, ✅ parcours (CV) ; accueil relu et ajusté.
-3. 🟡 Session 3 – ✅ agenda Google intégré, chargé au clic (consentement) + lien de secours ; reste : formulaire de contact (à décider).
+3. ✅ Session 3 – ✅ agenda Google intégré, chargé au clic (consentement) + lien de secours ;
+   ✅ formulaire de contact (`contact.html#formulaire`) via FormSubmit (AJAX vers `formsubmit.co/ajax/contact@gayraud.it`,
+   reCAPTCHA désactivé pour éviter les cookies Google, anti-spam par champ piège `_honey`). Activation à faire une fois
+   (lien reçu sur contact@gayraud.it au premier envoi). FormSubmit est listé dans la confidentialité.
 4. 🟡 Session 4 – Légal & SEO : ✅ police auto-hébergée, ✅ consentement agenda, ✅ confidentialité,
    ✅ audit Lighthouse mobile du 28/10/2026 (100/100/100/100 sur les 5 pages ; corrigés ensuite : ordre des titres
    sur Contact, logos en WebP). Non corrigeable : durée de cache de 10 min imposée par GitHub Pages. Reste : mentions légales (Kbis).

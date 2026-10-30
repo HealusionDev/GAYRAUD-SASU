@@ -64,7 +64,13 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  /* Pied de page collé en bas de l'écran, même sur les pages courtes */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
+body > main { flex: 1 0 auto; }
 img, svg { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 h1, h2, h3, h4 { line-height: 1.2; margin: 0 0 0.6em; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
@@ -341,3 +347,30 @@ ul { padding-left: 1.2em; }
 .booking-consent p { color: var(--c-text-muted); }
 .booking-consent a { color: var(--c-mauve); }
 .booking-consent .btn { margin-top: 0.75rem; }
+
+/* ---------- Formulaire de contact ---------- */
+.contact-form {
+  margin-top: 3rem; padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--radius);
+  max-width: 820px; margin-inline: auto;
+}
+.contact-form h2 { margin-bottom: 0.4rem; }
+.contact-form__grid { display: grid; gap: 1.25rem; margin-top: 1.75rem; }
+@media (min-width: 700px) { .contact-form__grid { grid-template-columns: 1fr 1fr; } .field--full { grid-column: 1 / -1; } }
+.field label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; }
+.field__opt { font-weight: 400; color: var(--c-text-muted); }
+.field input, .field textarea {
+  width: 100%; font: inherit; color: var(--c-text); background: var(--c-bg);
+  border: 1px solid #3a3b46; border-radius: 12px; padding: 0.75rem 0.9rem; transition: border-color .2s;
+}
+.field textarea { resize: vertical; min-height: 150px; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--c-violet); box-shadow: 0 0 0 3px rgba(115, 73, 253, 0.25); }
+.field [aria-invalid="true"] { border-color: #ff6b8b; }
+.contact-form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form__legal { font-size: var(--fs-sm); color: var(--c-text-muted); margin: 1.5rem 0 0; }
+.contact-form__legal a { color: var(--c-mauve); }
+.contact-form__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.contact-form__status { margin: 0; font-weight: 600; }
+.contact-form__status.is-success { color: #6ee7a8; }
+.contact-form__status.is-error { color: #ff8fa6; }
+.contact-form__status a { color: inherit; }

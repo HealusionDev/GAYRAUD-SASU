@@ -89,7 +89,49 @@
           <a class="btn btn--ghost btn--sm" href="mailto:contact@gayraud.it" style="align-self:center;margin-top:auto">contact@gayraud.it</a>
         </article>
       </div>
-      <!-- Option : formulaire de contact (Formspree / Web3Forms) envoyant vers contact@gayraud.it -->
+      <div class="container">
+        <form class="contact-form" id="formulaire" action="https://formsubmit.co/contact@gayraud.it" method="POST" data-ajax="https://formsubmit.co/ajax/contact@gayraud.it" novalidate>
+          <h2>Écrivez-moi</h2>
+          <p class="muted">Une question, un projet à évoquer ? Laissez-moi un message, je vous réponds rapidement.</p>
+
+          <!-- Paramètres FormSubmit -->
+          <input type="hidden" name="_subject" value="Nouveau message depuis gayraud.it">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://gayraud.it/contact?envoye=1#formulaire">
+          <!-- Anti-spam : champ invisible que seuls les robots remplissent -->
+          <div class="contact-form__trap" aria-hidden="true">
+            <label for="cf-honey">Ne pas remplir</label>
+            <input type="text" id="cf-honey" name="_honey" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="contact-form__grid">
+            <div class="field">
+              <label for="cf-name">Prénom et nom <span aria-hidden="true">*</span></label>
+              <input type="text" id="cf-name" name="name" autocomplete="name" required maxlength="120">
+            </div>
+            <div class="field">
+              <label for="cf-email">Email professionnel <span aria-hidden="true">*</span></label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required maxlength="200">
+            </div>
+            <div class="field field--full">
+              <label for="cf-company">Entreprise <span class="field__opt">(facultatif)</span></label>
+              <input type="text" id="cf-company" name="entreprise" autocomplete="organization" maxlength="160">
+            </div>
+            <div class="field field--full">
+              <label for="cf-message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="cf-message" name="message" rows="6" required maxlength="5000"></textarea>
+            </div>
+          </div>
+
+          <p class="contact-form__legal">Les champs marqués d'un * sont obligatoires. Vos informations sont utilisées uniquement pour répondre à votre demande et sont conservées 3 ans à compter de votre dernier contact. Le message est acheminé par le service FormSubmit. Voir la <a href="confidentialite">politique de confidentialité</a>.</p>
+
+          <div class="contact-form__actions">
+            <button type="submit" class="btn btn--primary">Envoyer le message</button>
+            <p class="contact-form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
