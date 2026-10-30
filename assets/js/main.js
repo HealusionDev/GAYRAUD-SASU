@@ -27,21 +27,41 @@
   if (el) el.textContent = new Date().getFullYear();
 })();
 
-// Agenda Google : chargé uniquement après clic (aucun cookie Google avant consentement)
+// Agenda Google : chargé uniquement après accord du visiteur (aucun cookie Google avant consentement).
+// Le choix est mémorisé dans le navigateur (localStorage, sans cookie) et peut être retiré à tout moment.
 (function () {
   var box = document.getElementById('agenda');
   if (!box) return;
   var btn = box.querySelector('[data-load-booking]');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
+  var KEY = 'gayraud-agenda-accord';
+  function remember(v) { try { v ? localStorage.setItem(KEY, '1') : localStorage.removeItem(KEY); } catch (e) {} }
+  function remembered() { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+
+  function load(focus) {
+    var wrap = document.createElement('div');
+    wrap.className = 'booking-loaded';
     var frame = document.createElement('iframe');
     frame.className = 'booking-frame';
     frame.src = box.getAttribute('data-src');
     frame.title = 'Agenda de réservation Google : choisir un créneau';
     frame.setAttribute('tabindex', '0');
-    box.replaceWith(frame);
-    frame.focus();
-  });
+    var revoke = document.createElement('button');
+    revoke.type = 'button';
+    revoke.className = 'booking-revoke';
+    revoke.textContent = "Ne plus afficher l'agenda automatiquement";
+    revoke.addEventListener('click', function () {
+      remember(false);
+      wrap.replaceWith(box);
+      box.querySelector('[data-load-booking]').focus();
+    });
+    wrap.appendChild(frame);
+    wrap.appendChild(revoke);
+    box.replaceWith(wrap);
+    if (focus) frame.focus();
+  }
+
+  if (btn) btn.addEventListener('click', function () { remember(true); load(true); });
+  if (remembered()) load(false);
 })();
 
 // Formulaire de contact : envoi sans quitter la page (Web3Forms)
@@ -79,6 +99,11 @@
     button.disabled = true;
     show('Envoi en cours…', true);
     var data = new FormData(form);
+    var who = (data.get('name') || '').toString().trim();
+    if (who) {
+      data.set('from_name', who + ' (via gayraud.it)');
+      data.set('subject', 'Nouveau message de ' + who + ' – gayraud.it');
+    }
     var networkError = false;
     fetch(form.getAttribute('action'), {
       method: 'POST',

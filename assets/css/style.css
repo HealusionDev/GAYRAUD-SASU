@@ -374,3 +374,9 @@ ul { padding-left: 1.2em; }
 .contact-form__status.is-success { color: #6ee7a8; }
 .contact-form__status.is-error { color: #ff8fa6; }
 .contact-form__status a { color: inherit; }
+
+.booking-revoke {
+  margin-top: 0.75rem; padding: 0; background: none; border: 0; cursor: pointer;
+  font: inherit; font-size: var(--fs-sm); color: var(--c-text-muted); text-decoration: underline;
+}
+.booking-revoke:hover { color: var(--c-mauve); }

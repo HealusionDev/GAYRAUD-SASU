@@ -61,11 +61,17 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - [x] Aucun traceur avant consentement : l'agenda Google (`rendez-vous.html`) n'est chargé qu'au clic sur
       « Afficher l'agenda » (`#agenda[data-src]` + `assets/js/main.js`). Cookies Google listés dans
       `confidentialite.html#cookies` (NID, __Secure-ENID, SEARCH_SAMESITE). Ne jamais réintroduire d'iframe chargée d'office.
+      Le choix est mémorisé en localStorage (`gayraud-agenda-accord`), retirable via le bouton « Ne plus afficher l'agenda
+      automatiquement » sous l'iframe.
+- [ ] **RAPPEL à faire au client dès réception du Kbis : souscrire à Google Workspace en payant avec le compte bancaire
+      professionnel**, puis enchaîner toutes les actions Workspace : migration de l'email contact@gayraud.it,
+      recréation de l'agenda de réservation, mise à jour du site (ci-dessous) et de la fiche Google Business Profile.
 - [ ] Après le Kbis : passage de l'agenda sur Google Workspace (contrat de sous-traitance RGPD) → mettre à jour
       l'URL d'intégration dans `rendez-vous.html` et la section « Destinataires et prestataires » de la confidentialité.
       Si l'email contact@gayraud.it passe aussi sur Workspace : modification des MX chez OVH (seule exception à la règle
       « ne pas toucher aux MX »), et remplacer OVHcloud par Google comme prestataire de messagerie dans la confidentialité.
 - [ ] Ne jamais publier les coordonnées personnelles du CV (téléphone, email perso).
+- [x] Mention RQTH dans les plaquettes : publique, validé par le client. Titre « Président » validé (SASU).
 - [ ] Vérifier l'accord des clients cités dans `parcours.html` (Share it, Make.org Foundation, CNP Assurances).
 - [ ] Mettre à jour les mentions légales dès réception du Kbis.
 
