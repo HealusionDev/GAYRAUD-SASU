@@ -86,3 +86,13 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
    ✅ audit Lighthouse mobile du 28/10/2026 (100/100/100/100 sur les 5 pages ; corrigés ensuite : ordre des titres
    sur Contact, logos en WebP). Non corrigeable : durée de cache de 10 min imposée par GitHub Pages. Reste : mentions légales (Kbis).
 5. ✅ Nom de domaine + email pro : gayraud.it en HTTPS (Enforce HTTPS actif), www redirigé, contact@gayraud.it intégré.
+
+## Suivi des actions du client (au 30/10/2026)
+Fait : domaine gayraud.it + DNS OVH, HTTPS, Search Console (site déclaré, sitemap soumis), LinkedIn Post Inspector,
+fiche Google Business Profile créée (validation Google en cours), réservation test de bout en bout, redirection www,
+email pro sur Gmail mobile (IMAP) + signature Roundcube, formulaire Web3Forms testé, email GitHub masqué,
+validations RQTH publique / titre Président. Logo SVG : abandonné.
+Restant : accord des clients cités (parcours) ; indexation Search Console (onglet Pages, puis « Demander l'indexation »
+accueil + offres) ; validation GBP puis avis clients ; URL du site sur LinkedIn et Malt ; renouvellement auto du domaine OVH.
+Après le Kbis : souscription Google Workspace (compte bancaire pro) → migration email (MX), agenda de réservation,
+mises à jour du site (rendez-vous, confidentialité, mentions légales, pied de page) et de la fiche GBP.
