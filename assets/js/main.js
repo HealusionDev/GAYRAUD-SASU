@@ -75,21 +75,31 @@
     }
     button.disabled = true;
     show('Envoi en cours…', true);
-    var data = {};
-    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    var data = new FormData(form);
+    var networkError = false;
     fetch(form.getAttribute('data-ajax'), {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
+      headers: { 'Accept': 'application/json' },
+      body: data
     })
-      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
+      .catch(function (err) { networkError = true; throw err; })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, body: j }; }); })
       .then(function (res) {
         if (res.ok && String(res.body.success) === 'true') {
           form.reset();
           show('Merci, votre message a bien été envoyé. Je vous réponds rapidement.', true);
-        } else { throw new Error('refus'); }
+        } else {
+          if (window.console) console.warn('Formulaire de contact – réponse du service :', res.body);
+          throw new Error('refus');
+        }
       })
       .catch(function () {
+        if (networkError) {
+          // Envoi en arrière-plan bloqué (réseau, extension…) : envoi classique du formulaire
+          show('Envoi en cours…', true);
+          HTMLFormElement.prototype.submit.call(form);
+          return;
+        }
         show('L\'envoi n\'a pas abouti. Vous pouvez m\'écrire directement à <a href="mailto:contact@gayraud.it">contact@gayraud.it</a>.', false);
       })
       .then(function () { button.disabled = false; });
