@@ -96,3 +96,10 @@ Restant : accord des clients cités (parcours) ; indexation Search Console (ongl
 accueil + offres) ; validation GBP puis avis clients ; URL du site sur LinkedIn et Malt ; renouvellement auto du domaine OVH.
 Après le Kbis : souscription Google Workspace (compte bancaire pro) → migration email (MX), agenda de réservation,
 mises à jour du site (rendez-vous, confidentialité, mentions légales, pied de page) et de la fiche GBP.
+
+## Tâches planifiées (agent IA)
+- Veille hebdomadaire missions / appels d'offres : chaque lundi 6 h 47 (Paris), synthèse dans une session dédiée.
+- Maintenance mensuelle du site : le 1er de chaque mois à 10 h 13 (Paris). Corrige seul uniquement les problèmes
+  techniques sans ambiguïté ; textes, apparence et pages légales : signalement seulement.
+- À mettre en place après Google Workspace (gayraud.it) : préparation des rendez-vous (agenda Workspace) et
+  brouillons de réponse aux messages du formulaire (boîte contact@gayraud.it chez Google).
