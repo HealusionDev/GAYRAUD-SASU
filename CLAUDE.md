@@ -50,6 +50,19 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - Accessibilité : contrastes suffisants, `alt` sur les images, navigation clavier, lien d'évitement.
 - Responsive, mobile first. Pas de défilement horizontal. Pied de page collé en bas (body en flex colonne, `main` flex: 1), marge haute fixe de 104 px (6.5rem) identique sur toutes les pages et tous les écrans : ne pas la surcharger page par page.
 
+## Référencement et nommage (conventions validées le 03-04/11/2026)
+- Zones d'intervention : Savoie, Haute-Savoie, Isère, Paris / Île-de-France. Lyon / Rhône (69) n'est PAS une zone ciblée :
+  ne pas le citer ; formule des descriptions : « Missions en Savoie, Isère, Haute-Savoie, région Rhône-Alpes et Paris ».
+- Titres : format « … | Gayraud » (accueil : « Gayraud | Consultant IT et transformation digitale à Chambéry »).
+  Préférer « transformation digitale » à « transformation numérique ».
+- `og:site_name` (toutes les pages) : « Gayraud - Consultant IT et transformation digitale à Chambéry ».
+- JSON-LD : activité « Gayraud - Transformation digitale & conseil » ; bloc `WebSite` (nom de site Google) name « Gayraud »,
+  alternateName « Gayraud Consultant IT », « Gayraud Transformation Digitale », « Cyrille Gayraud ». Pas de nom de secours
+  dans le contenu visible (choix du client).
+- Pied de page : « © 2026 Gayraud » ; libellé du logo « Gayraud - accueil ».
+- La carte de visite (QR code) pointe vers https://gayraud.it : ne jamais changer l'URL racine.
+- Suivi : indexation redemandée le 04/11/2026 ; nom de site Google encore « gayraud.it » (mise à jour non garantie).
+
 ## Checklist légale (à rappeler avant toute mise en ligne officielle)
 - [ ] Mentions légales : ✅ dénomination GAYRAUD, ✅ contact ; reste capital, siège, RCS/SIREN, TVA intracom
       (les champs « à compléter » sont surlignés dans `mentions-legales.html`).
