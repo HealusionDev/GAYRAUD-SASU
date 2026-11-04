@@ -35,7 +35,7 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 - Police : Mulish (400/600/700/800), auto-hébergée dans `assets/fonts/`.
 - Logos dans `assets/img/` : en-tête `logo-header.webp` (G + AYRAUD, 665×84, affiché à 28 px de haut),
   pied de page `logo-wordmark.webp` (540 px, affiché à 180 px). Sources PNG conservées : `logo-mark.png` (G),
-  `logo-wordmark.png`, `logo-full.png` ; image de partage `og-image.jpg`. Images affichées : WebP à 3× la taille d'affichage.
+  `logo-wordmark.png`, `logo-full.png` ; image de partage `og-gayraud-1200x630.jpg` (`og-image.jpg` conservée pour les anciens aperçus ; en cas de changement d image, créer un nouveau nom de fichier pour forcer LinkedIn à la recharger). Images affichées : WebP à 3× la taille d'affichage.
 - Toutes les valeurs sont des variables CSS en tête de `assets/css/style.css`.
 
 ## Documents téléchargeables
