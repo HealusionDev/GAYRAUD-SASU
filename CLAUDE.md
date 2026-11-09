@@ -46,7 +46,8 @@ le parcours, rediriger vers LinkedIn et Malt, permettre la prise de rendez-vous 
 ## Exigences sur chaque page
 - SEO : `<title>` et `<meta name="description">` uniques, Open Graph + Twitter Card, `canonical`,
   `lang="fr"`, un seul `<h1>`, JSON-LD `ProfessionalService` sur l'accueil. Mettre à jour `sitemap.xml`
-  à chaque nouvelle page.
+  à chaque nouvelle page, et la balise `<lastmod>` (AAAA-MM-JJ) de chaque page dont le contenu ou les métadonnées changent
+  (pas pour une simple modification de CSS/JS commune).
 - Accessibilité : contrastes suffisants, `alt` sur les images, navigation clavier, lien d'évitement.
 - Responsive, mobile first. Pas de défilement horizontal. Pied de page collé en bas (body en flex colonne, `main` flex: 1), marge haute fixe de 104 px (6.5rem) identique sur toutes les pages et tous les écrans : ne pas la surcharger page par page.
 
