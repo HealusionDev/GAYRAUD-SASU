@@ -112,7 +112,8 @@ Après le Kbis : souscription Google Workspace (compte bancaire pro) → migrati
 mises à jour du site (rendez-vous, confidentialité, mentions légales, pied de page) et de la fiche GBP.
 
 ## Tâches planifiées (agent IA)
-- Veille hebdomadaire missions / appels d'offres : chaque lundi 9 h 09 (Paris), pour une synthèse prête à 9 h 30, synthèse dans une session dédiée.
+- Veille missions / appels d'offres : chaque lundi 9 h 09 (Paris), synthèse prête à 9 h 30, dans une session dédiée ;
+  seconde veille le mercredi 9 h 09, centrée sur les publications depuis lundi (pas de doublon).
 - Maintenance mensuelle du site : le 1er de chaque mois à 10 h 13 (Paris). Corrige seul uniquement les problèmes
   techniques sans ambiguïté ; textes, apparence et pages légales : signalement seulement.
 - À mettre en place après Google Workspace (gayraud.it) : préparation des rendez-vous (agenda Workspace) et
